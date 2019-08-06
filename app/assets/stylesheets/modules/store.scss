@@ -1,0 +1,44 @@
+
+*{
+  box-sizing: border-box;
+  background-color: $base-backcolor;
+  color: $base-color;
+}
+
+
+
+.menu-content{
+  // height: calc(100vh - 150px);
+  .menu{
+    margin: 0 auto;
+    width: 1000px;
+    padding: 0 120px;
+    font-size: 30px;
+    text-align: center;
+    a{
+      line-height: 100px;
+      font-style: italic;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .menu__top{
+      height: 70px;
+      width: 100px;
+      font-style: italic;
+      letter-spacing: 0.1em;
+      margin: 20px 20px 60px;
+      border-bottom: 2px solid $base-color;
+    }
+    .menu__bottom{
+      display: flex;
+      .menu__list{
+        height: 70px;
+        margin: 0 20px 60px;
+        padding: 0 10px;
+        border-bottom: 2px solid $base-color;
+      }
+    }
+  }
+}
+

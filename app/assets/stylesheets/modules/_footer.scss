@@ -1,0 +1,36 @@
+.footer{
+  text-align: center;
+  margin: 0 auto;
+  width: 300px;
+  a{
+    line-height: 100px;
+    font-style: italic;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 0 15px;
+  }
+}
+
+.fab{
+  display: block;
+  height: 70px;
+  font-size: 35px;
+}
+
+.fa-facebook-square{
+  color: rgb(42, 102, 170);
+  
+}
+
+.fa-instagram{
+  color: rgb(165, 80, 165);
+}
+
+.fa-twitter-square{
+  color: rgb(38, 155, 201);
+}
+
+.fa-youtube-square{
+  color: rgb(255, 30, 30);
+}
