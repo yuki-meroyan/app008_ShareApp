@@ -1,14 +1,14 @@
 # README
 **DB設計**
 
-## summary table
+## stores table
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|references|null :false, foreign_key: true|
 |genre_id|references|null :false, foreign_key: true|
 
-### summary table Association
+### stores table Association
 
 - has_many :photos
 - has_many :details
@@ -20,11 +20,11 @@
 |Column|Type|Options|
 |------|----|-------|
 |image|string|
-|summary_id|references|null :false, foreign_key: true|
+|store_id|references|null :false, foreign_key: true|
 
 ### photos Association
 
-- belongs_to :summary
+- belongs_to :store
 
 ## genres table
 
@@ -34,7 +34,7 @@
 
 ### genres Association
 
-- has_many :summarys
+- has_many :stores
 
 ## details table
 
@@ -49,12 +49,12 @@
 |opentime|date|
 |closetime|date|
 |note|text|
-|summary_id|references|null :false, foreign_key: true|
+|store_id|references|null :false, foreign_key: true|
 |user_id|references|null :false, foreign_key: true|
 
 ### details Association
 
-- belongs_to :summary
+- belongs_to :store
 - belongs_to :user
 
 ## users table
@@ -66,5 +66,5 @@
 
 ### users table Association
 
-- has_many :summarys
+- has_many :stores
 - has_many :details
