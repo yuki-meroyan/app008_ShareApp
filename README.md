@@ -50,7 +50,7 @@
 |closetime|date|
 |note|text|
 |summary_id|references|null :false, foreign_key: true|
-|user_id|null :false, foreign_key: true|
+|user_id|references|null :false, foreign_key: true|
 
 ### details Association
 
