@@ -34,7 +34,7 @@
 
 ### genres Association
 
-- belongs_to :summary
+- has_many :summarys
 
 ## details table
 
