@@ -1,24 +1,68 @@
 # README
+**DB設計**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## summary table
 
-Things you may want to cover:
+|Column|Type|Options|
+|------|----|-------|
+|detail_id|references|null :false, foreign_key: true|
+|user_id|references|null :false, foreign_key: true|
+|genre_id|references|null :false, foreign_key: true|
 
-* Ruby version
+### summary table Association
 
-* System dependencies
+- has_many :photo
+- has_many :genre
+- has_many :user
+- has_many :detail
 
-* Configuration
+## photos table
 
-* Database creation
+|Column|Type|Options|
+|------|----|-------|
+|image|string|
+|summary_id|references|null :false, foreign_key: true|
 
-* Database initialization
+### photos Association
 
-* How to run the test suite
+- belongs_to :summary
 
-* Services (job queues, cache servers, search engines, etc.)
+## genres table
 
-* Deployment instructions
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, index: true, unique: true|
 
-* ...
+### genres Association
+
+- belongs_to :summary
+
+## details table
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, index: true|
+|price|integer|
+|address|text|index: true|
+|url|text|
+|recommendation|string|
+|features|text|
+|opentime|date|
+|closetime|date|
+|note|text|
+
+### details Association
+
+- belongs_to :summary
+
+## users table
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, index: true, unique: true|
+|email|string|null: false|
+
+### users table Association
+
+- belongs_to :summary
+
