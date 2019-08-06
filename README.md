@@ -5,16 +5,15 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|detail_id|references|null :false, foreign_key: true|
 |user_id|references|null :false, foreign_key: true|
 |genre_id|references|null :false, foreign_key: true|
 
 ### summary table Association
 
-- has_many :photo
-- has_many :genre
-- has_many :user
-- has_many :detail
+- has_many :photos
+- has_many :details
+- belongs_to :user
+- belongs_to :genre
 
 ## photos table
 
@@ -50,10 +49,13 @@
 |opentime|date|
 |closetime|date|
 |note|text|
+|summary_id|references|null :false, foreign_key: true|
+|user_id|null :false, foreign_key: true|
 
 ### details Association
 
 - belongs_to :summary
+- belongs_to :user
 
 ## users table
 
@@ -64,5 +66,5 @@
 
 ### users table Association
 
-- belongs_to :summary
-
+- has_many :summarys
+- has_many :details
