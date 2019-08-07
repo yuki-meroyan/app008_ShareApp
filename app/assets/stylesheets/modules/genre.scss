@@ -1,0 +1,41 @@
+
+*{
+  box-sizing: border-box;
+  background-color: $base-backcolor;
+  color: $base-color;
+}
+
+.store__middle{
+  height: 1000px;
+  width: 100%;
+  padding: 100px 200px;
+  background-color: rgb(255, 204, 115);
+  .store__contents{ 
+    width: 1200px;
+    margin: 0 auto;
+    .store__content{
+      width: 1000px;
+      &__name{
+        font-weight: bold;
+        margin-bottom: 12px;
+      }
+      &__address{
+
+      }
+      &__image {
+        width: 300px;
+        height: 150px;
+        background-color: #52D3FF;
+        margin-bottom: 12px;
+      }
+      &__child {
+        width: 300px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        float: left;
+        display: inline;
+        font-size: 12px;
+      }
+    }
+  }
+}
