@@ -6,40 +6,46 @@
 .store__middle
   .store__contents
     .store__content
-      .store__content__child
-        .store__content__image
-        %h2.store__content__name title
-        %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
-      .store__content__child
-        .store__content__image
-        %h2.store__content__name title
-        %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
-      .store__content__child
-        .store__content__image
-        %h2.store__content__name title
-        %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
-      .store__content__child
-        .store__content__image
-        %h2.store__content__name title
-        %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
-      .store__content__child
-        .store__content__image
-        %h2.store__content__name title
-        %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
-      .store__content__child
-        .store__content__image
-        %h2.store__content__name title
-        %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
-      .store__content__child
-        .store__content__image
-        %h2.store__content__name title
-        %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
-      .store__content__child
-        .store__content__image
-        %h2.store__content__name title
-        %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
-      .store__content__child
-        .store__content__image
-        %h2.store__content__name title
-        %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
+      - for i in 1..9
+        .store__content__child
+          %img.store__content__image{src:  "/assets/ペンギン画像_03.png"}
+          %h2.store__content__name
+            %a
+              = link_to new_genre_path do
+                title
+          %p.store__content__address 大阪府大阪市中央区難波５丁目１−１番６０号
+      -# .store__content__child
+      -#   .store__content__image
+      -#   %h2.store__content__name title
+      -#   %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
+      -# .store__content__child
+      -#   .store__content__image
+      -#   %h2.store__content__name title
+      -#   %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
+      -# .store__content__child
+      -#   .store__content__image
+      -#   %h2.store__content__name title
+      -#   %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
+      -# .store__content__child
+      -#   .store__content__image
+      -#   %h2.store__content__name title
+      -#   %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
+      -# .store__content__child
+      -#   .store__content__image
+      -#   %h2.store__content__name title
+      -#   %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
+      -# .store__content__child
+      -#   .store__content__image
+      -#   %h2.store__content__name title
+      -#   %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
+      -# .store__content__child
+      -#   .store__content__image
+      -#   %h2.store__content__name title
+      -#   %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
+      -# .store__content__child
+      -#   .store__content__image
+      -#   %h2.store__content__name title
+      -#   %p.store__content__address body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy. body copy.
+        
+
   
