@@ -42,3 +42,89 @@
   }
 }
 
+
+
+
+.store__middle{
+  .store__middle
+  &__show{
+    min-width: 1000px;
+    li{
+      margin: 0 15px;
+      width: 600px;
+      border-bottom: dotted;
+      padding: 15px;
+    }
+  }
+  &__image{
+    position: absolute;
+    margin: 0 0 0 20px ;
+    height: 400px;
+    width: 400px;
+  }
+  &__map{
+    margin: 20px 0 0 20px ;
+    position: absolute;
+    margin-top: 410px;
+    width: 400px;
+    height: 400px;
+  }
+  &__title{
+    position: absolute;
+    float: left;
+    min-width: 100px;
+    font-size: 20px;
+    text-align: end;
+  }
+  &__detail{
+    position: absolute;
+    margin-left: 440px;
+    padding: 15px 0 15px 0;
+    float: right;
+  }
+  &__jenre{
+
+  }
+  &__name{
+
+  }
+  &__address{
+
+  }
+  &__phone-number{
+
+  }
+  &__features{
+
+  }
+  &__opentime{
+
+  }
+  &__closetime{
+
+  }
+  &__recommendation{
+
+  }
+  &__price{
+
+  }
+  &__url{
+
+  }
+  &__note{
+
+  }
+} 
+
+.detail{
+  position: relative;
+  margin-left: 100px;
+  font-size: 20px;
+}
+
+
+
+
+
+
