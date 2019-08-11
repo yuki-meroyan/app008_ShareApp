@@ -1,86 +1,114 @@
 .header__top
   %p.header__top--text
-    Cafe's PAGE
+    New Post PAGE
 .header__middle
 .header__bottom
-  -# .cp_cont
-  -#   .cp_offcm01
-  -#     -# %input#cp_toggle01.fas.fa-bars
-  -#     %input#cp_toggle01{:type => "checkbox"}/
-  -#     %label{:for => "cp_toggle01"}
-  -#       %span
-  -#     .cp_menu
-  -#       %ul
-  -#         %li
-  -#           %a{:href => "#"} menu1
-  -#         %li
-  -#           %a{:href => "#"} menu2
-  -#         %li
-  -#           %a{:href => "#"} menu3
-  -#         %li
-  -#           %a{:href => "#"} menu4
-  -#         %li
-  -#           %a{:href => "#"} menu5
-  -#   .cp_contents
 
-.store__middle
-  .store__middle__show  
-    %img.store__middle__image{src: "/assets/YADO_CAFE.jpg"}
-    %ul.store__middle__detail
-      %li
-        .store__middle__title
-          ジャンル：
-        .store__middle__jenre.detail
-          Chocolate
-      %li
-        .store__middle__title
-          名前：
-        .store__middle__name.detail
-          YARD Coffee & Craft Chocolate
-      %li
-        .store__middle__title
-          住所：
-        .store__middle__address.detail
-          〒543-0063 大阪府大阪市天王寺区茶臼山町１−３
-      %li
-        .store__middle__title
-          電話番号：
-        .store__middle__phone-number.detail
-          06-6776-8166
-      %li
-        .store__middle__title
-          特徴：
-        .store__middle__features.detail
-          チョコレート、カフェ
-      %li
-        .store__middle__title
-          開店時間：
-        .store__middle__opentime.detail
-          XXXX
-      %li
-        .store__middle__title
-          閉店時間：
-        .store__middle__closetime.detail
-          XXXX
-      %li
-        .store__middle__title
-          オススメ：
-        .store__middle__recommendation.detail
-          〇〇が美味しい！！
-      %li
-        .store__middle__title
-          使用金額：
-        .store__middle__price.detail
-          1,000円
-      %li
-        .store__middle__title
-          URL：
-        .store__middle__url.detail
-          https://tabelog.com/osaka/A2701/A270203/27110735/
-      %li
-        .store__middle__title
-          備考：
-        .store__middle__note.detail
-          定休日 【火曜日、第1、第3水曜日】<br>2019年4月13日に上本町の『なかたに亭』が運営するYARD Coffee & Craft Chocolateがオープン
-    %img.store__middle__map{src: "/assets/なんばスカイオmap.jpg"}
+.form
+  %form{action: :create, method: :post}
+    .form__contents
+      %img.form__image{src: "/assets/YADO_CAFE.jpg"}
+      .form__detail
+        .form__genre
+          ジャンル
+          %p
+            %label
+              %input.with-gap{:checked => "checked", :name => "group3", :type => "radio"}/
+              %span Chocolate
+          %p
+            %label
+              %input.with-gap{:checked => "checked", :name => "group3", :type => "radio"}/
+              %span Cake
+          %p
+            %label
+              %input.with-gap{:checked => "checked", :name => "group3", :type => "radio"}/
+              %span Cafe
+          %p
+            %label
+              %input.with-gap{:checked => "checked", :name => "group3", :type => "radio"}/
+              %span Bread
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{:type => "text"}/
+              %label{:for => "autocomplete-input"} 名前
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{:type => "text"}/
+              %label{:for => "autocomplete-input"} 住所
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{:type => "text"}/
+              %label 電話番号
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{:type => "text"}/
+              %label 特徴
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{:type => "text"}/
+              %label 開店時間
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{:type => "text"}/
+              %label 閉店時間
+      .form__detail.form__detail-2
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{:type => "text"}/
+              %label オススメ
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{:type => "text"}/
+              %label 使用金額
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{:type => "text"}/
+              %label URL
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %textarea#textarea1.materialize-textarea
+              %label{:for => "textarea1"} 備考
+        -# %img.form__map{src: "/assets/なんばスカイオmap.jpg"}
+    -# %input.form__jenre{type: "radio", name: :jenre, :size => "50"}
+    -# %i.fa.fa-user.fa-lg.fa-fw{"aria-hidden": "true"}
+    -# %input.form__name{name: :name, :size => "50", placeholder: "名前"}
+    -# %i.fas.fa-coffee.fa-lg.fa-fw{"aria-hidden": "true"}
+    -# %input.form__address{name: :address, :size => "50", placeholder: "住所"}
+    -# %i.fas.fa-coffee.fa-lg.fa-fw{"aria-hidden": "true"}
+    -# %input.form__phone-number{name: :number, :size => "50", placeholder: "電話番号"}
+    -# %i.fas.fa-coffee.fa-lg.fa-fw{"aria-hidden": "true"}
+    -# %input.form__features{name: :features, :size => "50", placeholder: "特徴"}  
+    -# %i.fas.fa-coffee.fa-lg.fa-fw{"aria-hidden": "true"}
+    -# %input.form__opentime{name: :opentime, :size => "50", placeholder: "開店時間"}
+    -# %i.fas.fa-coffee.fa-lg.fa-fw{"aria-hidden": "true"}
+    -# %input.form__closetime{name: :closetime, :size => "50", placeholder: "閉店時間"}
+    -# %i.fas.fa-coffee.fa-lg.fa-fw{"aria-hidden": "true"}
+    -# %input.form__recommendation{name: :recommendation, :size => "50", placeholder: "オススメ"}
+    -# %i.fas.fa-coffee.fa-lg.fa-fw{"aria-hidden": "true"}
+    -# %input.form__price{name: :price, :size => "50", placeholder: "使用金額"}
+    -# %i.fas.fa-coffee.fa-lg.fa-fw{"aria-hidden": "true"}
+    -# %input.form__url{name: :url, :size => "50", placeholder: "URL"}
+    -# %i.fas.fa-coffee.fa-lg.fa-fw{"aria-hidden": "true"}
+    
+    -# %textarea.form__note{name: :note, :size => "100", placeholder: "備考"}
       

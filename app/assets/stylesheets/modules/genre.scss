@@ -22,6 +22,8 @@
       }
       &__name{
         font-weight: bold;
+        font-size: 15px;
+        margin: 5px 0;
       }
       &__address{
         padding: 5px 6px ;
@@ -38,6 +40,7 @@
         float: left;
         display: inline;
         font-size: 12px;
+        height: 250px;
       }
     }
   }
