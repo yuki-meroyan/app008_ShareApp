@@ -5,31 +5,46 @@
 
 .form__contents{
   display: flex;
-  padding: 100px;
+  padding: 100px 20vw 0;
 }
 
 .form__genre{
-  height: 120px;
-  padding-left: 20px;
+  height: 140px;
+  padding: 30px 0 0 50px;
+  font-size: 15px;
 }
 
 .form__image{
-  position: relative;
+  position: absolute;
   width: 400px;
 }
 
 .form__detail{
-  position: absolute;
+  position: relative;
   width: 400px;
-  margin-left: 400px;
+  &__category{
+    margin: 10px;
+    font-size: 18px;
+  }
 }
 
 .form__detail-2{
-  padding-top: 120px;
-  margin-left: 800px;
+  // padding-top: 120px;
+  // margin-left: 800px;
 }
 
-.form__map{
-  position: relative;
-  width: 400px;
+.form__detail-3{
+  margin: 0 auto;
+  padding: 0 60px;
 }
+
+.form-btn{
+  margin: 10px ;
+  
+}
+
+
+// .form__map{
+//   position: relative;
+//   width: 400px;
+// }

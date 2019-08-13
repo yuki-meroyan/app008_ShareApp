@@ -1,0 +1,103 @@
+.header__top
+  %p.header__top--text
+    New Post PAGE
+.header__middle
+.header__bottom
+
+.form
+  %form{action: :create, method: :post}
+    .form__contents
+      -# %img.form__image{src: "/assets/YADO_CAFE.jpg"}
+      .form__detail
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix 
+              %label Category
+        .form__genre
+          %p
+            %label
+              %input.with-gap{checked: "checked", name: "genre", type: "radio"}/
+              %span Chocolate
+          %p
+            %label
+              %input.with-gap{checked: "checked", name: "genre", type: "radio"}/
+              %span Cake
+          %p
+            %label
+              %input.with-gap{checked: "checked", name: "genre", type: "radio"}/
+              %span Cafe
+          %p
+            %label
+              %input.with-gap{checked: "checked", name: "genre", type: "radio"}/
+              %span Bread
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{type: "text", name: "user_name"}/
+              %label{:for => "autocomplete-input"} 名前
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{type: "text", name: ""}/
+              %label 住所
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{type: "text", name: ""}/
+              %label 電話番号
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{type: "text", name: ""}/
+              %label 特徴
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{type: "text", name: ""}/
+              %label 開店時間
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{type: "text", name: ""}/
+              %label 閉店時間
+      .form__detail.form__detail-2
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{type: "text", name: ""}/
+              %label オススメ
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{type: "text", name: ""}/
+              %label 使用金額
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %input#autocomplete-input.autocomplete{type: "text", name: ""}/
+              %label URL
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              %textarea#textarea1.materialize-textarea.form-textarea
+              %label{:for => "textarea1"} 備考
+    .form__detail.form__detail-3
+      %button.form-btn.btn.waves-effect.waves-light{name: "action", type: "submit"}
+        クリア
+        %i.material-icons.right 
+      %button.form-btn.btn.waves-effect.waves-light{name: "action", type: "submit"}
+        GO!!!
+        %i.material-icons.right 
+
+
