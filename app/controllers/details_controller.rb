@@ -1,7 +1,8 @@
 class DetailsController < ApplicationController
-  before_action :set_group, only: [:create]
+  before_action :set_genre, only: [:create]
 
   def new
+    @detail = Detail.new
     @genres = Genre.all
   end
 
