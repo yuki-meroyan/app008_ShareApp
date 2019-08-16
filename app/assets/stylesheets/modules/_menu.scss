@@ -33,7 +33,7 @@
   box-sizing: border-box;
   cursor: pointer;
   -webkit-transition: all 400ms;
-  transition: all 400ms
+  transition: all 400ms;
 }
 
 #wrapper .btn-gnavi span {
@@ -43,28 +43,29 @@
   background: #666;
   border-radius: 10px;
   -webkit-transition: all 400ms;
-  transition: all 400ms
+  transition: all 400ms;
 }
 
 #wrapper .btn-gnavi span:nth-child(1) {
-  top: 0
+  top: 0;
 }
 
 #wrapper .btn-gnavi span:nth-child(2) {
-  top: 10px
+  top: 10px;
 }
 
 #wrapper .btn-gnavi span:nth-child(3) {
-  top: 20px
+  top: 20px;
 }
 
 #wrapper .btn-gnavi.open {
   -webkit-transform: rotate(180deg);
-  transform: rotate(180deg)
+  transform: rotate(180deg);
+  background: #26a69a;
 }
 
 #wrapper .btn-gnavi.open span {
-  background: #26a69a;
+  background: #fff;
 }
 
 #wrapper .btn-gnavi.open span:nth-child(1) {

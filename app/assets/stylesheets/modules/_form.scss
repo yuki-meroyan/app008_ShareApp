@@ -5,7 +5,7 @@
 
 .form__contents{
   display: flex;
-  padding: 100px 20vw 0;
+  padding: 0 20vw;
 }
 
 .form__genre{
@@ -40,8 +40,11 @@
 }
 
 .form-btn{
-  margin: 10px ;
+  margin: 10px 20px;
   
+}
+.clear-btn{
+  margin: 10px 20px;
 }
 
 
