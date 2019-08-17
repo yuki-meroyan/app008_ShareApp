@@ -7050,7 +7050,6 @@ $jscomp.polyfill = function (e, r, p, m) {
     $(document).on('change', input_selector, function () {
       if (this.value.length !== 0 || $(this).attr('placeholder') !== null) {
         $(this).siblings('label').addClass('active');
-        console.log("aa")
       }
       M.validate_field($(this));
     });
