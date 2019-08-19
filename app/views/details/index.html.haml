@@ -8,20 +8,22 @@
 .header__bottom
 
 .form
-  = form_for details_path do |f|
+  = form_for details_path, action: :create, method: :post do |f|
     .form__contents
       .form__detail
-        .col.s12
-          .row
-            .input-field.col.s12
-              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-              = f.label :ganre, "Category", class: "with-gap"
-        .form__genre
-          - @genres.each_with_index do |genre,i|
-            %label.form-radio
-              = f.radio_button "genre_id", i+1, class: "with-gap", checked: "checked"
-              %span
-                = genre.name
+        -# .col.s12
+        -#   .row
+        -#     .input-field.col.s12
+        -#       %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+        -#       = f.label :ganre, "Category", class: "with-gap"
+        -# .form__genre
+        -#   - @genres.each_with_index do |genre,i|
+        -#     %label.form-radio
+        -#       = f.radio_button "genre_id", i+1, class: "with-gap", checked: "checked"
+        -#       %span
+        -#         = genre.name
+        -#   %label.form-radio
+        -#     = f.radio_button "genre_id", 0, class: "with-gap", checked: "checked", style: "display: none"
         .col.s12
           .row
             .input-field.col.s12
@@ -88,11 +90,11 @@
             .input-field.col.s12
               %i.fas.fa-coffee.fa-lg.fa-fw.prefix
               = f.label :note, "備考"
-              = f.text_area :url, id: "textarea1", class: "materialize-textarea form-textarea"
+              = f.text_area :note, id: "textarea1", class: "materialize-textarea form-textarea"
     .form__detail.form__detail-3
-      -# %button.clear-btn.btn.waves-effect.waves-light{name: "action"}
-      -#   Clear
-      -#   %i.material-icons.right
+      %button.clear-btn.btn.waves-effect.waves-light
+        Clear
+        %i.material-icons.right
       = f.submit "GO!!!", class: "form-btn btn waves-effect waves-light"
       %i.material-icons.right
 

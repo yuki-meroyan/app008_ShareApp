@@ -22,6 +22,8 @@
               = f.radio_button "genre_id", i+1, class: "with-gap", checked: "checked"
               %span
                 = genre.name
+          %label.form-radio
+            = f.radio_button "genre_id", 0, class: "with-gap", checked: "checked", style: "display: none"
         .col.s12
           .row
             .input-field.col.s12
@@ -88,104 +90,10 @@
             .input-field.col.s12
               %i.fas.fa-coffee.fa-lg.fa-fw.prefix
               = f.label :note, "備考"
-              = f.text_area :url, id: "textarea1", class: "materialize-textarea form-textarea"
+              = f.text_area :note, id: "textarea1", class: "materialize-textarea form-textarea"
     .form__detail.form__detail-3
-      -# %button.clear-btn.btn.waves-effect.waves-light{name: "action"}
-      -#   Clear
-      -#   %i.material-icons.right
+      %button.clear-btn.btn.waves-effect.waves-light
+        Clear
+        %i.material-icons.right
       = f.submit "GO!!!", class: "form-btn btn waves-effect waves-light"
       %i.material-icons.right
-
-  -# %form{id: "new_detail"}
-  -#   .form__contents
-  -#     .form__detail
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix 
-  -#             %label Category
-  -#       .form__genre
-  -#         - @genres.each do |genre|
-  -#           %p
-  -#             %label
-  -#               %input.with-gap{checked: "checked", name: "genre_id", type: "radio"}/
-  -#               %span
-  -#                 = genre.name
-  -#         %p
-  -#           %label
-  -#             %input.with-gap{checked: "checked", name: "genre_id", type: "radio", style: "display: none"}/
-              
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "name"}/
-  -#             %label{:for => "autocomplete-input"} 名前
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "address"}/
-  -#             %label 住所
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "phone_number"}/
-  -#             %label 電話番号
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "feature"}/
-  -#             %label 特徴
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "opentime"}/
-  -#             %label 開店時間
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "closetime"}/
-  -#             %label 閉店時間
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "holiday"}/
-  -#             %label 休日
-  -#     .form__detail.form__detail-2
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "recommendation"}/
-  -#             %label オススメ
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "average_use_price"}/
-  -#             %label 平均金額
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %input#autocomplete-input.autocomplete{type: "text", name: "url"}/
-  -#             %label URL
-  -#       .col.s12
-  -#         .row
-  -#           .input-field.col.s12
-  -#             %i.fas.fa-coffee.fa-lg.fa-fw.prefix
-  -#             %textarea#textarea1.materialize-textarea.form-textarea
-  -#             %label{:for => "textarea1", name: "note"} 備考
-  -#   .form__detail.form__detail-3
-  -#     %button.clear-btn.btn.waves-effect.waves-light{name: "action", type: "submit"}
-  -#       Clear
-  -#       %i.material-icons.right 
-  -#     %button.form-btn.btn.waves-effect.waves-light{controller: :detail, action: :create, method: :post, name: "action", type: "submit"}
-  -#       GO!!!
-  -#       %i.material-icons.right 

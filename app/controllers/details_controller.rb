@@ -1,29 +1,29 @@
 class DetailsController < ApplicationController
-  # before_action :set_genre, only: [:create]
+  before_action :set_genre, only: [:index, :new]
 
   def index
     @detail = Detail.new
-    @genres = Genre.all
+  end
+
+  def new
+    @detail = Detail.new
   end
 
   def create
-    binding.pry
-    @detail = Details.new(detail_params)
-    @detail.save
+    @detail = Detail.new(detail_params)
+    # @detail.save
   end
 
   private
 
   def detail_params
-    # params.require(:detail).permit(:name, :place, :phone_number, :feature, :opentime, :closetime, :holiday, :recommendation, :average_use_price, :url, :note).merge(user_id: current_user.id)
-    # params.require(:detail).permit(:name, :place, :phone_number, :feature, :opentime, :closetime, :holiday, :recommendation, :average_use_price, :url, :note, :genre_id)
     binding.pry
-    params.require(:detail).permit(:name)
+    params.require(:detail).permit(:name, :place, :phone_number, :feature, :opentime, :closetime, :holiday, :recommendation, :average_use_price, :url, :note).merge(user_id: current_user.id)
+    
   end
 
-  # def set_genre
-  #   binding.pry
-  #   @genre = Genre.find(params[:genre_id])
-  # end
+  def set_genre
+    @genres = Genre.all
+  end
 
 end
