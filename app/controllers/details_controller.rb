@@ -1,9 +1,10 @@
 class DetailsController < ApplicationController
-  before_action :set_genre, only: [:index, :new]
+  before_action :set_genre, only: [:new]
 
   def index
-    @detail = Detail.new
+    @details = Detail.all
   end
+
 
   def new
     @detail = Detail.new
@@ -11,14 +12,14 @@ class DetailsController < ApplicationController
 
   def create
     @detail = Detail.new(detail_params)
-    # @detail.save
+    @detail.save
+    redirect_to root_path(genre_id: nil)
   end
 
   private
 
   def detail_params
-    binding.pry
-    params.require(:detail).permit(:name, :place, :phone_number, :feature, :opentime, :closetime, :holiday, :recommendation, :average_use_price, :url, :note).merge(user_id: current_user.id)
+    params.require(:detail).permit(:name, :place, :phone_number, :feature, :opentime, :closetime, :holiday, :recommendation, :average_use_price, :url, :note, :genre_id).merge(user_id: current_user.id)
     
   end
 
