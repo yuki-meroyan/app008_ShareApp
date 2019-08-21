@@ -3,19 +3,28 @@
 
 .header__top
   %p.header__top--text
-    = @page_name
-.header__middle
-.header__bottom
+    Share-ChoCaCaBre
 
-.store__middle
-  .store__contents
-    .store__content
-      - for i in 1..9
-        .store__content__child
+
+.menu-content
+  .menu
+    .menu__top
+      %a
+        = @genre
+        = link_to genres_path(genre_id: nil) do
+          ALL
+    .menu__bottom
+      - @genres.each do |genre|
+        .menu__list
           %a
-            = link_to root_path do
-              %img.store__content__image{src:  "/assets/YADO_CAFE.jpg"}
-              %h2.store__content__name
-                YARD Coffee & Craft Chocolate
-              %p.store__content__address 大阪府大阪市天王寺区茶臼山町１−３
-      
+            = link_to genre_path(genre.id) do
+              = genre.name
+    .menu__bottom
+      .menu__list
+        %a
+          = link_to new_detail_path do
+            New Post
+      .menu__list
+        %a
+          = link_to details_path do
+            Search

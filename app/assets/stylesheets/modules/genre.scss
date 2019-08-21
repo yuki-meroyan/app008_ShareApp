@@ -6,13 +6,13 @@
 }
 
 .store__middle{
-  height: 1000px;
+  max-height: 1200px;
   width: 100%;
   padding: 5% 12.5%;
   overflow: auto;
-  background-color: rgb(255, 204, 115);
   .store__contents{ 
     margin: 0 auto;
+    padding-top: 20px;
     .store__content{
       &__name{
         font-weight: bold;
@@ -37,6 +37,16 @@
         font-size: 12px;
         height: 250px;
       }
+      .store__nav{
+        width: 100%;
+        .pagination{
+          margin: 0 auto;
+          display: inline-block;
+        }
+        &--pagenate{
+        }
+      }
     }
   }
+  
 }
