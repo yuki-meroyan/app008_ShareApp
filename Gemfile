@@ -61,3 +61,4 @@ gem "font-awesome-rails"
 gem 'kaminari'
 gem 'pry-byebug'
 gem 'devise'
+gem 'carrierwave'

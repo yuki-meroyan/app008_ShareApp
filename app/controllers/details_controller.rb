@@ -8,11 +8,13 @@ class DetailsController < ApplicationController
 
   def new
     @detail = Detail.new
+    @images = Image.new
   end
 
   def create
     @detail = Detail.new(detail_params)
-    @detail.save
+    # @detail.save
+    binding.pry
     redirect_to root_path(genre_id: nil)
   end
 

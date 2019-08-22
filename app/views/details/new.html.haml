@@ -67,6 +67,20 @@
               = f.label :holiday, "休日"
               = f.text_field :holiday, id: "autocomplete-input", class: "autocomplete"
       .form__detail.form__detail-2
+        .form__image
+          = f.fields_for @images do |image|
+            .file-field.input-field
+              .btn
+              -#   = image.label :url
+              -#   = image.file_field_tag, multiple: true, name: 'images[image][]'
+              -# .file-path-wrapper
+              -#   = image.= text_field, class: "file-path validate{placeholder: "Upload one or more files"}"
+
+              -#   %span File
+              -#   %input{:multiple => "multiple", :type => "file"}/
+              -# .file-path-wrapper
+              -#   %input.file-path.validate{:placeholder => "Upload one or more files", :type => "text"}/
+
         .col.s12
           .row
             .input-field.col.s12
@@ -91,6 +105,8 @@
               %i.fas.fa-coffee.fa-lg.fa-fw.prefix
               = f.label :note, "備考"
               = f.text_area :note, id: "textarea1", class: "materialize-textarea form-textarea"
+      
+        
     .form__detail.form__detail-3
       %button.clear-btn.btn.waves-effect.waves-light
         Clear
