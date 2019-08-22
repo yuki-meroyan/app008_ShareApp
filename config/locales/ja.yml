@@ -1,0 +1,8 @@
+ja:
+  views:
+    pagination:
+      first: <i class="fas fa-angle-double-left fa-pagenate"></i>
+      last: <i class="fas fa-angle-double-right fa-pagenate"></i>
+      previous: <i class="fas fa-angle-left fa-pagenate"></i>
+      next: <i class="fas fa-angle-right fa-pagenate"></i>
+      truncate: "..."

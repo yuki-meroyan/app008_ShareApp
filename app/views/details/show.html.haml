@@ -3,7 +3,7 @@
 
 .header__top
   %p.header__top--text
-    Cafe's PAGE
+    = @detail.name + "'s PAGE"
 .header__middle
 .header__bottom
 
@@ -15,56 +15,61 @@
         .store__middle__title
           ジャンル：
         .store__middle__jenre.detail
-          Chocolate
+          = @detail.genre.name
       %li
         .store__middle__title
           名前：
         .store__middle__name.detail
-          YARD Coffee & Craft Chocolate
+          = @detail.name
       %li
         .store__middle__title
           住所：
-        .store__middle__address.detail
-          〒543-0063 大阪府大阪市天王寺区茶臼山町１−３
+        .store__middle__place.detail
+          = @detail.place
       %li
         .store__middle__title
           電話番号：
         .store__middle__phone-number.detail
-          06-6776-8166
+          = @detail.phone_number
       %li
         .store__middle__title
           特徴：
-        .store__middle__features.detail
-          チョコレート、カフェ
+        .store__middle__feature.detail
+          = @detail.feature
       %li
         .store__middle__title
           開店時間：
         .store__middle__opentime.detail
-          XXXX
+          = @detail.opentime
       %li
         .store__middle__title
           閉店時間：
         .store__middle__closetime.detail
-          XXXX
+          = @detail.closetime
+      %li
+        .store__middle__title
+          休日：
+        .store__middle__holiday.detail
+          = @detail.holiday
       %li
         .store__middle__title
           オススメ：
         .store__middle__recommendation.detail
-          〇〇が美味しい！！
+          = @detail.recommendation
       %li
         .store__middle__title
-          使用金額：
+          平均金額：
         .store__middle__price.detail
-          1,000円
+          = @detail.average_use_price
       %li
         .store__middle__title
           URL：
         .store__middle__url.detail
-          https://tabelog.com/osaka/A2701/A270203/27110735/
+          = @detail.url
       %li
         .store__middle__title
           備考：
         .store__middle__note.detail
-          定休日 【火曜日、第1、第3水曜日】<br>2019年4月13日に上本町の『なかたに亭』が運営するYARD Coffee & Craft Chocolateがオープン
+          = @detail.note
     %img.store__middle__map{src: "/assets/なんばスカイオmap.jpg"}
       

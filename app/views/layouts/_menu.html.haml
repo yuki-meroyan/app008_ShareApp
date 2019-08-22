@@ -7,10 +7,16 @@
     %ul.menu
       %li
         %a{href: root_path} トップページ
+      - if user_signed_in?
+        %li
+          = link_to "編集", edit_user_registration_path
+        %li
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
+      - else
+        %li
+          %a{href: new_user_registration_path} ログイン
       %li
-        %a{href: new_user_registration_path} ログイン
-      %li
-        %a{href: ""} 投稿
+        = link_to "投稿", new_detail_path
       %li
         %a{href: ""} 検索
       %li

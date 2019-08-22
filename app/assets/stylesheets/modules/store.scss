@@ -49,6 +49,7 @@
   .store__middle
   &__show{
     min-width: 1000px;
+    min-height: 800px;
     li{
       margin: 0 15px;
       width: 600px;
@@ -88,19 +89,22 @@
   &__name{
 
   }
-  &__address{
+  &__place{
 
   }
   &__phone-number{
 
   }
-  &__features{
+  &__feature{
 
   }
   &__opentime{
 
   }
   &__closetime{
+
+  }
+  &__holiday{
 
   }
   &__recommendation{

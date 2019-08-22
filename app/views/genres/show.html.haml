@@ -14,7 +14,7 @@
         - @details.each do |detail|
           .store__content__child
             %a
-              = link_to root_path do
+              = link_to detail_path(detail.id) do
                 %img.store__content__image{src:  "/assets/YADO_CAFE.jpg"}
                 %h2.store__content__name
                   = detail.name
@@ -29,6 +29,5 @@
               %img.store__content__image{src:  "/assets/YADO_CAFE.jpg"}
               %h2.store__content__name
               %p.store__content__address 大阪府大阪市天王寺区茶臼山町１−３
-      
-        -# .store__nav--pagenate
+
       

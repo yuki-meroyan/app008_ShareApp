@@ -16,6 +16,10 @@ class DetailsController < ApplicationController
     redirect_to root_path(genre_id: nil)
   end
 
+  def show
+    @detail = Detail.find(params[:id])
+  end
+
   private
 
   def detail_params
