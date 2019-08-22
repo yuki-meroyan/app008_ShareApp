@@ -1,0 +1,75 @@
+
+= render '/layouts/menu'
+
+.header__top
+  %p.header__top--text
+    = @detail.name + "'s PAGE"
+.header__middle
+.header__bottom
+
+.store__middle
+  .store__middle__show  
+    %img.store__middle__image{src: "/assets/YADO_CAFE.jpg"}
+    %ul.store__middle__detail
+      %li
+        .store__middle__title
+          ジャンル：
+        .store__middle__jenre.detail
+          = @detail.genre.name
+      %li
+        .store__middle__title
+          名前：
+        .store__middle__name.detail
+          = @detail.name
+      %li
+        .store__middle__title
+          住所：
+        .store__middle__place.detail
+          = @detail.place
+      %li
+        .store__middle__title
+          電話番号：
+        .store__middle__phone-number.detail
+          = @detail.phone_number
+      %li
+        .store__middle__title
+          特徴：
+        .store__middle__feature.detail
+          = @detail.feature
+      %li
+        .store__middle__title
+          開店時間：
+        .store__middle__opentime.detail
+          = @detail.opentime
+      %li
+        .store__middle__title
+          閉店時間：
+        .store__middle__closetime.detail
+          = @detail.closetime
+      %li
+        .store__middle__title
+          休日：
+        .store__middle__holiday.detail
+          = @detail.holiday
+      %li
+        .store__middle__title
+          オススメ：
+        .store__middle__recommendation.detail
+          = @detail.recommendation
+      %li
+        .store__middle__title
+          平均金額：
+        .store__middle__price.detail
+          = @detail.average_use_price
+      %li
+        .store__middle__title
+          URL：
+        .store__middle__url.detail
+          = @detail.url
+      %li
+        .store__middle__title
+          備考：
+        .store__middle__note.detail
+          = @detail.note
+    %img.store__middle__map{src: "/assets/なんばスカイオmap.jpg"}
+      

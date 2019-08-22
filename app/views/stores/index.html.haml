@@ -1,0 +1,30 @@
+
+= render '/layouts/menu'
+
+.header__top
+  %p.header__top--text
+    Share-ChoCaCaBre
+
+
+.menu-content
+  .menu
+    .menu__top
+      %a
+        = @genre
+        = link_to genres_path(genre_id: nil) do
+          ALL
+    .menu__bottom
+      - @genres.each do |genre|
+        .menu__list
+          %a
+            = link_to genre_path(genre.id) do
+              = genre.name
+    .menu__bottom
+      .menu__list
+        %a
+          = link_to new_detail_path do
+            New Post
+      .menu__list
+        %a
+          = link_to details_path do
+            Search

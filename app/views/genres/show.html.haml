@@ -1,0 +1,33 @@
+
+= render '/layouts/menu'
+
+.header__top
+  %p.header__top--text
+    = @genre.name + "'s PAGE"
+.header__middle
+.header__bottom
+
+.store__middle
+  .store__contents
+    .store__content
+      - if @details 
+        - @details.each do |detail|
+          .store__content__child
+            %a
+              = link_to detail_path(detail.id) do
+                %img.store__content__image{src:  "/assets/YADO_CAFE.jpg"}
+                %h2.store__content__name
+                  = detail.name
+                %p.store__content__address
+                  = detail.place
+        .store__nav
+          = paginate(@details)
+      - else
+        .store__content__child
+          %a
+            = link_to root_path do
+              %img.store__content__image{src:  "/assets/YADO_CAFE.jpg"}
+              %h2.store__content__name
+              %p.store__content__address 大阪府大阪市天王寺区茶臼山町１−３
+
+      

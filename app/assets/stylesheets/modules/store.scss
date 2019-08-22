@@ -1,0 +1,134 @@
+
+*{
+  box-sizing: border-box;
+  background-color: $base-backcolor;
+  color: $base-color;
+}
+
+
+
+.menu-content{
+  // height: calc(100vh - 150px);
+  .menu{
+    margin: 0 auto;
+    width: 1000px;
+    padding: 0 120px;
+    font-size: 30px;
+    text-align: center;
+    a{
+      line-height: 100px;
+      font-style: italic;
+      letter-spacing: 0.1em;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .menu__top{
+      height: 70px;
+      width: 100px;
+      font-style: italic;
+      letter-spacing: 0.1em;
+      margin: 20px 20px 50px;
+      border-bottom: 2px solid $base-color;
+    }
+    .menu__bottom{
+      display: flex;
+      .menu__list{
+        height: 70px;
+        margin: 0 20px 60px;
+        padding: 0 10px;
+        border-bottom: 2px solid $base-color;
+      }
+    }
+  }
+}
+
+
+
+
+.store__middle{
+  .store__middle
+  &__show{
+    min-width: 1000px;
+    min-height: 800px;
+    li{
+      margin: 0 15px;
+      width: 600px;
+      border-bottom: dotted;
+      padding: 15px;
+    }
+  }
+  &__image{
+    position: absolute;
+    margin: 0 0 0 20px ;
+    height: 400px;
+    width: 400px;
+  }
+  &__map{
+    margin: 20px 0 0 20px ;
+    position: absolute;
+    margin-top: 410px;
+    width: 400px;
+    height: 400px;
+  }
+  &__title{
+    position: absolute;
+    float: left;
+    min-width: 100px;
+    font-size: 20px;
+    text-align: end;
+  }
+  &__detail{
+    position: absolute;
+    margin-left: 440px;
+    padding: 15px 0 15px 0;
+    float: right;
+  }
+  &__jenre{
+
+  }
+  &__name{
+
+  }
+  &__place{
+
+  }
+  &__phone-number{
+
+  }
+  &__feature{
+
+  }
+  &__opentime{
+
+  }
+  &__closetime{
+
+  }
+  &__holiday{
+
+  }
+  &__recommendation{
+
+  }
+  &__price{
+
+  }
+  &__url{
+
+  }
+  &__note{
+
+  }
+} 
+
+.detail{
+  position: relative;
+  margin-left: 100px;
+  font-size: 20px;
+}
+
+
+
+
+
+

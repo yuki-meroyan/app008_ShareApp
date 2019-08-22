@@ -1,0 +1,19 @@
+
+.header__top{
+  height: 150px;
+  padding-left: 20px;
+  min-width: 800px;
+  &--text{
+    // font-family: 'santio';
+    letter-spacing: 0.1em;
+    font-size: 50px;
+    line-height: 150px;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+.header__middle{
+  width: 100%;
+
+}

@@ -1,0 +1,99 @@
+
+= render '/layouts/menu'
+
+.header__top
+  %p.header__top--text
+    New Post PAGE
+.header__middle
+.header__bottom
+
+.form
+  = form_for @detail do |f|
+    .form__contents
+      .form__detail
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :ganre, "Category", class: "with-gap"
+        .form__genre
+          - @genres.each_with_index do |genre,i|
+            %label.form-radio
+              = f.radio_button "genre_id", i+1, class: "with-gap", checked: "checked"
+              %span
+                = genre.name
+          %label.form-radio
+            = f.radio_button "genre_id", 0, class: "with-gap", checked: "checked", style: "display: none"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :name, "名前"
+              = f.text_field :name, id: "autocomplete-input", class: "autocomplete"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :place, "住所"
+              = f.text_field :place, id: "autocomplete-input", class: "autocomplete"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :phone_number, "電話番号"
+              = f.text_field :phone_number, id: "autocomplete-input", class: "autocomplete"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :feature, "特徴"
+              = f.text_field :feature, id: "autocomplete-input", class: "autocomplete"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :opentime, "開店時間"
+              = f.text_field :opentime, id: "autocomplete-input", class: "autocomplete"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :closetime, "閉店時間"
+              = f.text_field :closetime, id: "autocomplete-input", class: "autocomplete"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :holiday, "休日"
+              = f.text_field :holiday, id: "autocomplete-input", class: "autocomplete"
+      .form__detail.form__detail-2
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :recommendation, "オススメ"
+              = f.text_field :recommendation, id: "autocomplete-input", class: "autocomplete"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :average_use_price, "平均金額"
+              = f.text_field :average_use_price, id: "autocomplete-input", class: "autocomplete"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :url, "URL"
+              = f.text_field :url, id: "autocomplete-input", class: "autocomplete"
+        .col.s12
+          .row
+            .input-field.col.s12
+              %i.fas.fa-coffee.fa-lg.fa-fw.prefix
+              = f.label :note, "備考"
+              = f.text_area :note, id: "textarea1", class: "materialize-textarea form-textarea"
+    .form__detail.form__detail-3
+      %button.clear-btn.btn.waves-effect.waves-light
+        Clear
+        %i.material-icons.right
+      = f.submit "GO!!!", class: "form-btn btn waves-effect waves-light"
+      %i.material-icons.right
