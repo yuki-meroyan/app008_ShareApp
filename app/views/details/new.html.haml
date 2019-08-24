@@ -68,14 +68,33 @@
               = f.text_field :holiday, id: "autocomplete-input", class: "autocomplete"
       .form__detail.form__detail-2
         .form__image
-          = f.fields_for @images do |image|
+          = f.fields_for :images do |image|
             .file-field.input-field
+              = image.label :url, for: "upload-image", style: "display: none"
               .btn
-              -#   = image.label :url
-              -#   = image.file_field_tag, multiple: true, name: 'images[image][]'
-              -# .file-path-wrapper
-              -#   = image.= text_field, class: "file-path validate{placeholder: "Upload one or more files"}"
+                = image.file_field :url, multiple: true, name: 'images[image][]', id: "image-file"
+              .file-path-wrapper
+                -# = image.text_field :name, name: 'images[name][]', class: "file-path"
+                = image.text_field :name, class: "file-path"
+            .file-field.input-field
+              = image.label :url, for: "upload-image", style: "display: none"
+              .btn
+                = image.file_field :url, multiple: true, name: 'images[image][]', id: "image-file"
+              .file-path-wrapper
+                -# = image.text_field :name, name: 'images[name][]', class: "file-path"
+                = image.text_field :name, class: "file-path"
 
+              -# .dropzone-container.clearfix.file-field.input-field
+              -# .dropzone-area.file-path-wrapper
+              -#   #preview
+              -#     = image.label :url, class: "dropzone-box", for: "upload-image" do
+              -#       .input_area
+              -#         = image.file_field :url, multiple: true, name: 'product_images[image][]', id: "upload-image", class: "upload-image", 'data-image': 0
+              -#       %p ここをクリックしてください
+              -# .dropzone-area.file-path-wrapper
+              -#   #preview2
+              -#     = image.label :url, class: "dropzone-box", for: "upload-image" do
+              -#       %p ここをクリックしてください
               -#   %span File
               -#   %input{:multiple => "multiple", :type => "file"}/
               -# .file-path-wrapper
