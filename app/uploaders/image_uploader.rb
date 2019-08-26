@@ -13,6 +13,56 @@ class ImageUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
+  module ActionDispatch
+    module Http
+      class UploadedFile
+        attr_accessor :original_filename, :content_type, :tempfile, :headers
+  
+        def initialize(hash) #
+          @original_filename = encode_filename(hash[:filename]) 
+          @content_type      = hash[:type]     #画像の保存形式
+          @headers           = hash[:head]       # header 情報
+          @tempfile          = hash[:tempfile]  # 画像データのリファレンス?
+          raise(ArgumentError, ':tempfile is required') unless @tempfile
+        end
+  
+        def read(*args)
+          @tempfile.read(*args)
+        end
+  
+        # Delegate these methods to the tempfile.
+        # つまり、tempfileについて、size, path, open, などなどが使えるということ
+        [:open, :path, :rewind, :size].each do |method|
+          class_eval "def #{method}; @tempfile.#{method}; end"
+        end
+  
+        private
+        #画像のファイルネームを取り込む部分
+        #強制的にUTF-8に変換
+        def encode_filename(filename) 
+          # Encode the filename in the utf8 encoding, unless it is nil or we're in 1.8
+          if "ruby".encoding_aware? && filename
+            filename.force_encoding("UTF-8").encode!
+          else
+            filename
+          end
+        end
+      end
+  
+      module Upload
+        # Convert nested Hash to HashWithIndifferentAccess and replace
+        # file upload hash with UploadedFile objects
+        def normalize_parameters(value)
+          if Hash === value && value.has_key?(:tempfile)
+            UploadedFile.new(value)
+          else
+            super
+          end
+        end
+        private :normalize_parameters
+      end
+    end
+  end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url(*args)
   #   # For Rails 3.1+ asset pipeline compatibility:

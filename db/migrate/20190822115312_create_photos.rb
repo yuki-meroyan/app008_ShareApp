@@ -1,7 +1,7 @@
-class CreateImages < ActiveRecord::Migration[5.0]
+class CreatePhotos < ActiveRecord::Migration[5.0]
   def change
-    create_table :images do |t|
-      t.text        :url
+    create_table :photos do |t|
+      t.text        :image
       t.string      :name
       t.references  :detail, null: false, foreign_key: true
       t.timestamps

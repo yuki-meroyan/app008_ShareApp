@@ -68,21 +68,32 @@
               = f.text_field :holiday, id: "autocomplete-input", class: "autocomplete"
       .form__detail.form__detail-2
         .form__image
-          = f.fields_for :images do |image|
+          = f.fields_for :photos do |photo|
             .file-field.input-field
-              = image.label :url, for: "upload-image", style: "display: none"
-              .btn
-                = image.file_field :url, multiple: true, name: 'images[image][]', id: "image-file"
-              .file-path-wrapper
-                -# = image.text_field :name, name: 'images[name][]', class: "file-path"
-                = image.text_field :name, class: "file-path"
-            .file-field.input-field
-              = image.label :url, for: "upload-image", style: "display: none"
-              .btn
-                = image.file_field :url, multiple: true, name: 'images[image][]', id: "image-file"
-              .file-path-wrapper
-                -# = image.text_field :name, name: 'images[name][]', class: "file-path"
-                = image.text_field :name, class: "file-path"
+            -#   = photo.label :image, for: "upload-image", style: "display: none"
+            -#   .btn
+            -#     = photo.file_field :image, multiple: true, id: "image-file"
+            -#   .file-path-wrapper
+            -#     -# = image.text_field :name, name: 'images[name][]', class: "file-path"
+            -#     = photo.text_field :name, class: "file-path"
+            -# .file-field.input-field
+            -#   = photo.label :image, for: "upload-image", style: "display: none"
+            -#   .btn
+            -#     = photo.file_field :image, multiple: true, id: "image-file"
+            -#   .file-path-wrapper
+            -#     = photo.text_field :name, class: "file-path"
+
+
+            
+            
+            
+            -# .file-field.input-field
+            -#   = image.label :image, for: "upload-image", style: "display: none"
+            -#   .btn
+            -#     = image.file_field :image, multiple: true, name: 'images[image][]', id: "image-file"
+            -#   .file-path-wrapper
+            -#     -# = image.text_field :name, name: 'images[name][]', class: "file-path"
+            -#     = image.text_field :name, class: "file-path"
 
               -# .dropzone-container.clearfix.file-field.input-field
               -# .dropzone-area.file-path-wrapper

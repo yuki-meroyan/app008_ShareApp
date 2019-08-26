@@ -8,8 +8,10 @@
 .header__bottom
 
 .store__middle
-  .store__middle__show  
-    %img.store__middle__image{src: "/assets/YADO_CAFE.jpg"}
+  .store__middle__show
+    -# = image_tag @image.image.to_s
+    %img.store__middle__image{src: @photos.image[0]}
+    -# %img.store__middle__image{src: "/assets/YADO_CAFE.jpg"}
     %ul.store__middle__detail
       %li
         .store__middle__title
