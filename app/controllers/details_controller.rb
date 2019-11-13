@@ -13,10 +13,10 @@ class DetailsController < ApplicationController
   end
 
   def create
+    # @detail = Detail.new(detail_params)
     @detail = Detail.new(detail_params)
     
-    
-    
+    binding.pry
     if @detail.save
       # if @detail.photos
       #   @detail.photos[0].image.each do |photo|
@@ -27,8 +27,8 @@ class DetailsController < ApplicationController
       #   end
       # end
     else
-      @detail.photos.build
-      format.html{render action: 'new'}
+      # @detail.photos.build
+      # format.html{render action: 'new'}
     end
 
     redirect_to root_path(genre_id: nil)
@@ -46,7 +46,9 @@ class DetailsController < ApplicationController
   private
 
   def detail_params
-    params.require(:detail).permit(:name, :place, :phone_number, :feature, :opentime, :closetime, :holiday, :recommendation, :average_use_price, :url, :note, :genre_id, photos_attributes: {image: []}).merge(user_id: current_user.id)
+    
+    params.require(:detail).permit(:name, :place, :phone_number, :feature, :opentime, :closetime, :holiday, :recommendation, :average_use_price, :url, :note, :genre_id,photos_attributes:[:id,:image,:_destroy]).merge(user_id: current_user.id)
+    # params.require(:detail).permit(:name, :place, :phone_number, :feature, :opentime, :closetime, :holiday, :recommendation, :average_use_price, :url, :note, :genre_id, photos_attributes: {image: []}).merge(user_id: current_user.id)
     # params.require(:detail).permit(:name, :place, :phone_number, :feature, :opentime, :closetime, :holiday, :recommendation, :average_use_price, :url, :note, :genre_id, images_attributes: [:image]).merge(user_id: current_user.id)
     
   end

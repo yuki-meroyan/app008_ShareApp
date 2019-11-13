@@ -68,14 +68,22 @@
               = f.text_field :holiday, id: "autocomplete-input", class: "autocomplete"
       .form__detail.form__detail-2
         .form__image
-          = f.fields_for :photos do |photo|
-            .file-field.input-field
-            -#   = photo.label :image, for: "upload-image", style: "display: none"
-            -#   .btn
-            -#     = photo.file_field :image, multiple: true, id: "image-file"
-            -#   .file-path-wrapper
-            -#     -# = image.text_field :name, name: 'images[name][]', class: "file-path"
-            -#     = photo.text_field :name, class: "file-path"
+          .file-field.input-field
+            = f.label :image, for: "upload-image", style: "display: none"
+            .btn
+              = f.file_field :image ,name: "detail[photos_attributes][0][image]",class: 'sell__upload__drop-file',id: 'post__img__last',accept: "image/*",multiple: true,data: {image: 0}
+            .file-path-wrapper
+              = f.text_field :name, class: "file-path"
+          -# = f.fields_for :photos do |photo|
+          -#   .file-field.input-field
+              
+          -#     = photo.label :image, for: "upload-image", style: "display: none"
+          -#     .btn
+          -#       -# = photo.file_field :image, multiple: true, id: "image-file"
+          -#       = photo.file_field :image ,name: "detail[photos_attributes][0][image]",class: 'sell__upload__drop-file',id: 'post__img__last',accept: "image/*",multiple: true,data: {image: 0}
+          -#     .file-path-wrapper
+          -#       -# = image.text_field :name, name: 'images[name][]', class: "file-path"
+          -#       = photo.text_field :name, class: "file-path"
             -# .file-field.input-field
             -#   = photo.label :image, for: "upload-image", style: "display: none"
             -#   .btn
